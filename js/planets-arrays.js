@@ -1,31 +1,74 @@
- "use strict";
- let planets = [
-     'Mercury',
-     'Venus',
-     'Earth',
-     'Mars',
-     'Jupiter',
-     'Saturn',
-     'Uranus',
-     'Neptune',
- ];
- planets.push(response);
- for (var i = 0; i < planets.length; i++){
-        planets.push(planets[i]);
-    } console.log(planets);
+(function(){
+    "use strict";
 
- planets.push(response);
-    for (var i = 7; i < planets.length; i++){
-        planets.push(planets[i]);
-    } console.log(planets);
+    var planets = [
+        'Mercury',
+        'Venus',
+        'Earth',
+        'Mars',
+        'Jupiter',
+        'Saturn',
+        'Uranus',
+        'Neptune'
+    ];
 
- planets.push(response);
-    alert(planets.shift());
-planets.push(response);
-    alert(planets.pop());
+    /**
+     * TODO:
+     * Read each console log below, and write some javascript code to perform
+     * the step that it describes
+     */
 
-console.log(planets[2]);
+    console.log('Adding "The Sun" to the beginning of the planets array.');
+    console.log(planets);
+    planets.unshift('The Sun');
+    console.log(planets);
 
-   function planetsReverse(input){
-       console.log(input.reverse().join("\n");)}
-   }
+    console.log('Adding "Pluto" to the end of the planets array.');
+    console.log(planets);
+    planets.push('Pluto');
+    console.log(planets);
+
+    console.log('Removing "The Sun" from the beginning of the planets array.');
+    console.log(planets);
+    planets.shift('The Sun');
+    console.log(planets);
+
+    console.log('Removing "Pluto" from the end of the planets array.');
+    console.log(planets);
+    planets.pop('Pluto');
+    console.log(planets);
+
+    console.log('Finding and logging the index of "Earth" in the planets array.');
+    var index = planets.indexOf('Earth');
+    console.log(index);
+
+    console.log("Reversing the order of the planets array.");
+    console.log(planets);
+    var planets = ['Mercury',
+        'Venus',
+        'Earth',
+        'Mars',
+        'Jupiter',
+        'Saturn',
+        'Uranus',
+        'Neptune'];
+    console.log(planets);
+    console.log('reversing the planets array');
+    planets.reverse();
+    console.log(planets);
+
+    console.log("Sorting the planets array.");
+    console.log(planets);
+    var planets = ['Mercury',
+        'Venus',
+        'Earth',
+        'Mars',
+        'Jupiter',
+        'Saturn',
+        'Uranus',
+        'Neptune'];
+    console.log(planets);
+    console.log('sorting the planets array');
+    planets.sort();
+    console.log(planets)
+})();
