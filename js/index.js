@@ -1,4 +1,4 @@
 "use strict"
-let age = prompt(message: 'What is your age');
+let age = prompt('What is your age');
 
 alert('DocrRob, you are ${age} old = WOW!')
