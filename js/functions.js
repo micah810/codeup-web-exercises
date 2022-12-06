@@ -43,12 +43,17 @@ console.log(helloMessage);
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
 
+function isTwo (five) {
+    (2 < 5)
+}
+
 /**
  * TODO:
  * Create a function called 'isTwo' that takes a number as a parameter.
  * The function should return a boolean value based on whether or not the passed
  * number is the number 2.
- *
+
+
  * Example
  * > isTwo(1) // returns false
  * > isTwo(2) // returns true
