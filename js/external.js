@@ -14,3 +14,13 @@ let hercules = Number(prompt("How many days did you rent hercules?"))
 let totalPrice =((parseInt(littleMermaid)+ parseInt(brotherBear)+ parseInt(hercules)) *3)
 
 alert('${totalPrice} is how much it will cost')
+
+
+let text
+{
+    if (confirm("Hi, do you want to enter a number" + "?") === true) {
+        alert("Great lets get started!");
+    } let userInput = prompt('please enter a number'); {
+    console.log('the user entered:' + userInput)
+}
+}

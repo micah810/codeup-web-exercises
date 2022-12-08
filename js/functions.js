@@ -10,10 +10,10 @@
  */
 
 function sayHello(name) {
-    return "Hello" + name + "!";
+    if(name === 'micah');
+    return 'Hello micah'
 }
-
-console.log(sayHello(name: "codeup"));
+console.log(sayHello(name));
 
 /**
  * TODO:
@@ -23,8 +23,9 @@ console.log(sayHello(name: "codeup"));
  * console.log 'helloMessage' to check your work
  */
 
-let helloMessage =sayHello(name: "Micah");
-console.log(helloMessage);
+function sayHello(micah){
+    let(micah)
+}
 
 
 /**
@@ -34,9 +35,10 @@ console.log(helloMessage);
  * console.
  */
 
-let myName ="Micah";
-helloMessage = sayHello(myName);
-console.log(helloMessage);
+var myName
+function sayHello(myName){
+
+}
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -131,3 +133,4 @@ const originalPrice = 100;
 const discountPercent =.2;
 console.log(applyDiscount(orginalPrice, discountPercent));
 console.log(applyDiscount(pice.45.99, disount 0.12));
+
