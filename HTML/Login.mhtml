@@ -1,0 +1,80 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://localhost:63342/codeup-web-exercises/login.html?_ijt=m3rpbusdcct91s0uh4ql00n431&_ij_reload=RELOAD_ON_SAVE
+Subject: Login
+Date: Wed, 14 Dec 2022 21:35:33 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--wa1bnjNDwYjKBK97USehhrjaW80e2ozm75uO8uJdu7----"
+
+
+------MultipartBoundary--wa1bnjNDwYjKBK97USehhrjaW80e2ozm75uO8uJdu7----
+Content-Type: text/html
+Content-ID: <frame-F8E03715CBF55D04085A64F24950A9BF@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://localhost:63342/codeup-web-exercises/login.html?_ijt=m3rpbusdcct91s0uh4ql00n431&_ij_reload=RELOAD_ON_SAVE
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8">
+   =20
+    <title>Login</title>
+    <link rel=3D"stylesheet" href=3D"http://localhost:63342/codeup-web-exer=
+cises/css/login.css?jbUpdateLinksId=3D33">
+</head>
+<body style=3D"background-color: #cbffcd">
+<main>
+    <form action=3D"http://localhost:63342/codeup-web-exercises/login.html?=
+_ijt=3Dm3rpbusdcct91s0uh4ql00n431&amp;_ij_reload=3DRELOAD_ON_SAVE#">
+        <fieldset class=3D"width-80">
+            <div class=3D"form-group">
+                <label for=3D"username" class=3D"form-label"><strong>Userna=
+me</strong></label>
+               <br>
+                <input type=3D"text" id=3D"username" name=3D"username" clas=
+s=3D"form-control">
+            </div>
+            <div class=3D"form-group">
+                <label for=3D"password" class=3D"form-label"><strong>Passwo=
+rd</strong></label>
+               <br>
+                <input type=3D"password" id=3D"password" name=3D"password" =
+class=3D"form-control">
+            </div>
+            <br>
+            <button class=3D"btn btn-block" style=3D"background-color: #0fb=
+784;" element{=3D"">Login</button>
+
+        </fieldset>
+    </form>
+</main>
+
+
+</body></html>
+------MultipartBoundary--wa1bnjNDwYjKBK97USehhrjaW80e2ozm75uO8uJdu7----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://localhost:63342/codeup-web-exercises/css/login.css?jbUpdateLinksId=33
+
+@charset "utf-8";
+
+* { padding: 0px; margin: 0px; }
+
+body, html { height: 100%; width: 90%; background-color: rgb(203, 255, 205)=
+; font-family: Arial, Ubuntu, sans-serif; }
+
+form { }
+
+fieldset { box-shadow: rgba(0, 0, 0, 0.75) 10px 10px 5px 0px; }
+
+.width-80 { }
+
+.form-group { }
+
+.form-label { }
+
+.btn-block { }
+
+.btn { background-color: rgb(255, 255, 255); }
+
+.form-control { width: 100%; }
+------MultipartBoundary--wa1bnjNDwYjKBK97USehhrjaW80e2ozm75uO8uJdu7------
