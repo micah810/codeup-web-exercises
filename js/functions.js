@@ -8,13 +8,9 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-
-function sayHello(name) {
-    if(name === 'micah');
-    return 'Hello micah'
+function sayHello(name){
 }
-console.log(sayHello(name));
-
+return name;
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -23,11 +19,6 @@ console.log(sayHello(name));
  * console.log 'helloMessage' to check your work
  */
 
-function sayHello(micah){
-    let(micah)
-}
-
-
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
@@ -35,27 +26,16 @@ function sayHello(micah){
  * console.
  */
 
-var myName
-function sayHello(myName){
-
-}
-
-
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
-
-function isTwo (five) {
-    (2 < 5)
-}
 
 /**
  * TODO:
  * Create a function called 'isTwo' that takes a number as a parameter.
  * The function should return a boolean value based on whether or not the passed
  * number is the number 2.
-
-
+ *
  * Example
  * > isTwo(1) // returns false
  * > isTwo(2) // returns true
@@ -67,16 +47,6 @@ function isTwo (five) {
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-
-function isTwo(aNumber) {
-    const result = aNumber === 2
-    return result;
-}
-
-console.log(isTwo(aNumber: 1));
-console.log(isTwo(aNumber: 2));
-console.log(isTwo(aNumber: 3));
-
 
 /**
  * TODO:
@@ -90,24 +60,12 @@ console.log(isTwo(aNumber: 3));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-console.log(calculateTip(0.20, 20); // returns 4
-
-console.log(calculateTip(0.25, 25.50); // returns 6.375
-
-console.log(calculateTip(0.15, 33.42); // returns 5.013
-
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-
-let tipPercent = prompt( "Enter typ percent");
-let billtotal = prompt("Enter bill total");
-let tipAmount = calculateTip(tipPercent, billTotal);
-alert("Tip amount is" + tipAmount);
-
 
 /**
  * TODO:
@@ -123,14 +81,3 @@ alert("Tip amount is" + tipAmount);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-
-
-function applyDiscount(price, discount);
-    const discountAmount = price * discount;
-    return price- discoun
-
-const originalPrice = 100;
-const discountPercent =.2;
-console.log(applyDiscount(orginalPrice, discountPercent));
-console.log(applyDiscount(pice.45.99, disount 0.12));
-
