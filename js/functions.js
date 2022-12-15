@@ -8,9 +8,10 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function sayHello(name){
-}
-return name;
+//function sayHello(name){
+//    return "hello, codeup!";
+//}
+//console.log(name)
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -18,7 +19,10 @@ return name;
  *
  * console.log 'helloMessage' to check your work
  */
+function sayHello('helloMessage'){
 
+}
+console.log('helloMessage' + 'micah');
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
