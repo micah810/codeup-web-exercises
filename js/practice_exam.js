@@ -81,7 +81,9 @@ function getLowestNumber(d,e,f){
 // If the numeric value can be evenly divided by the divisor, then return true.
 //Otherwise, return false.
 function isEvenlyDivisible(g, h){
-
+if(g % 2 === 0 && h % 2 === 0){
+    return true;
+}
 }
 
 
@@ -100,7 +102,9 @@ function inBetween(i,j,k){
 //Return the string with the newly replaced values.
 //If the first input is not a string, return false.
 function replace(l,m,n){
-
+    if(text.replace('l', 'm', 'n')){
+        return true;
+    }
 }
 
 //8)Write a function named addStringLengths that takes in two inputs.
