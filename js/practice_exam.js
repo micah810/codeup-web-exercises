@@ -141,3 +141,85 @@ function calculateChange(totalPaid, totalCost){
     return false;
 }
 console.log(!isNaN(true));
+
+"use strict";
+
+/**
+ * Write your solutions here.
+ *
+ * **Note**: While normally it is good practice to wrap your javascript in an
+ * immediately invoked function expression (iife), you should _not_ do that
+ * here. If you do, the automated tests will not be able to see your functions.
+ */
+
+//1
+function isANumber(a) {
+    if(!isNaN(a) && typeof a !== 'boolean'
+        && typeof a !== 'string' && a !== null){
+        return true;
+    } return false;
+}
+
+//2
+function increment(b){
+    if(!isNaN(b) && typeof b !== 'boolean' && b !== null){
+        return b + 1;
+    } return false;
+}
+
+//3
+function decrement(c){
+    if(!isNaN(c) && typeof c !== 'boolean' && c !== null){
+        return c - 1;
+    }return false;
+}
+
+//4
+function getHighestNumber(d,e,f){
+    if(!isNaN(d) && !isNaN(e) && !isNaN(f)){
+        return Math.max(d,e,f);
+    }return false;
+}
+
+//5
+function parseNumber(g) {
+    return parseFloat(g);
+}
+
+//6
+function add(h,i){
+    if(!isNaN(h) && !isNaN(i) &&
+        typeof h !== 'boolean' && typeof i !== 'boolean'){
+        return h + i;
+    } return false;
+}
+
+//7
+function multiply(j,k){
+    if(!isNaN(j) && !isNaN(j)
+        && typeof j !== 'boolean' && typeof k !== 'boolean'
+        && j !== null && k !== null){
+        return j * k;
+    } return false;
+}
+
+//8
+function square(l){
+    if(!isNaN(l) && typeof l !== 'boolean' && l !== null){
+        return l * l;
+    } return false;
+}
+
+//9
+function sumOfSquares(m,n){
+    if(!isNaN(m) && !isNaN(n) && square(m) && square(n)){
+        return (m * m) + (n * n);
+    }return false;
+}
+
+//10
+function isPalindrome(o){
+    if(typeof o === "string"){
+        return true;
+    } return false;
+}
