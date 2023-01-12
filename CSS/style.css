@@ -1,1 +1,4 @@
-<h1 style="color:purple";>Welcome to Veridian Dynamics!</h1>
+.fancy-header {
+    color: rebeccapurple; /* single line comment */
+    text-decoration: underline;
+}
