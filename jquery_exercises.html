@@ -4,8 +4,24 @@
     <title>Curriculum Code Sample</title>
 </head>
 <body>
+<!--ID Selectors exercise-->
+<h1 style="font-size: xx-large">JQ Exercise</h1>
+<div class="container">
+<p style="font-size: large">This is to practice id & class selectors using JQuery</p>
+<ul>
+    <li>practice</li>
+</ul>
+</div>
 <script src="js/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+       $('.important, p').html('font-size', '20px');
+    });
 
+    $('input#desc').click(function(){
+        alert($(this).attr('id'));
+    })
+</script>
 <!-- INSERT HTML CODE SAMPLE HERE -->
 <script
         src="https://code.jquery.com/jquery-3.6.3.js"
@@ -14,12 +30,29 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/my-custom-javascript.js"></script>
 
+<!--//select an element by id & log-->
+<!--const myH1 = $("#my-H1");-->
+
+<!--//select elements by class & log-->
+<!--const myBoxes = $(".my-box");-->
+<!--console.log(myBoxes);-->
+
+<!--//select elements by tag & log-->
+<!--console.log($("p"));-->
+
+<!--//select 5px dotted border-->
+<!--$("*").css("border", "5px dotted cornflowerblue");-->
 
 <script>
     "use strict"
 
     $(document).ready(function () {
         alert("DOM has finished loading");
+    });
+
+    $("*").css("border, 1px red");
+    $("#fs").change(function(){
+        $('.changeMe').css("font-size", $(this).val() + "px");
     });
 </script>
 
