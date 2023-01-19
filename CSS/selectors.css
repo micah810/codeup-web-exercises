@@ -23,6 +23,11 @@ em {
     clear:both;
 }
 
+body {
+    background-image: url("rain.jpg");
+    background-color: #FFFFFF;
+}
+
 /*  selector for all "anchor" elements
     that are a direct child of an element with class="article" */
 .article>a {
