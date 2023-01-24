@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>This Weeks Weather</title>
+    <!--WEATHER-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--   MAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet'/>
+    <link rel="stylesheet" type="text/css" href="css/weather_map.css">
+    <script src="js/weathermap.js"></script>
+    <style>
+        #my-map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+    <div class="container">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-image: linear-gradient(lightsteelblue, darkorange);
+            }
+
+            #my-map {
+                position: center;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+            }
+        </style>
+        <!--Map-->
+    </div>
+</head>
+<body>
+
+<div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#about">About</a>
+</div>
+
+<div class="form-group">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="search-box">
+                <div class="col-md-5 mx-auto mt-5 p-4" style="box-shadow: 0px 0px 12px black">
+                    <input type="text" class="form-control" placeholder="Enter City...">
+                    <button type="button" style="background-color: steelblue" class="btn btn-success mt-4 btn-block">
+                        Retrieve This Weeks Weather
+                    </button>
+                    <button type="button" style="background-color: steelblue" class="btn btn-success mt-4 btn-block">
+                        Retrieve Current Weather
+                    </button>
+
+                    <!--                    <div>-->
+                    <!--                        <h4>-->
+                    <!--                            <span id="city-name"></span>-->
+                    <!--                            <span id="country-name"></span>-->
+                    <!--                        </h4>-->
+                    <!--                        <p>-->
+                    <!--                            <span id="main"></span>-->
+                    <!--                            <em id="desc"></em>-->
+                    <!--                            <ins id="temp"></ins>-->
+                    <!--                        </p>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div id="my-map"></div>
+    </div>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js'></script>
+    <!--<link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet'/>-->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+            crossorigin="anonymous"></script>
+    <script src="js/keys.js"></script>
+    <script src="js/mapbox-geocoder-utils.js"></script>
+    <script>
+        $.get('api.openweathermap.org/data/2.5/forecast')
+
+    </script>
+    <!---->
+    <script>
+        $(document).ready(function () {
+            mapboxgl.accessToken = MAPBOX_API_KEY;
+            const map = new mapboxgl.Map({
+                container: 'my-map',
+                style: 'mapbox://styles/mapbox/navigation-night-v1',
+                zoom: 5,
+                center: [-105.03335, 39.76217]
+            });
+            let marker = new mapboxgl.Marker().setLngLat([-105.03335, 39.76217]).addTo(map);
+        });
+
+        function markerPlaceAndPopup(map, info, token) {
+            geocode(info.address, token).then(function (coordinates) {
+                var popup = new mapboxgl.Popup()
+                    .setHTML(info.popupHTML);
+                var marker = new mapboxgl.Marker()
+                    .setLngLat(coordinates)
+                    .addTo(map)
+                    .setPopup(popup);
+                popup.addTo(map);
+            });
+        }
+
+        placeMarkerAndPopup(alamoInfo, accessToken, map);
+    </script>
+</div>
+</body>
+</html>
+
+<!--test out open weather API-->
+<!--get mapbox starter map with some starting location-->
+<!--make a function for fetching 5 day forcast for given lat and lng-->
+<!--call that function for step 2-->
+
