@@ -117,10 +117,7 @@
                     center: [-105.03335, 39.76217]
                 });
                 let marker = new mapboxgl.Marker({"color": "darkorange"}).setLngLat([-105.03335, 39.76217]).addTo(map);
-
             });
-
-
             function markerPlaceAndPopup(map, info, token) {
                 geocode(info.address, token).then(function (coordinates) {
                     var button = document.createElement('button');
