@@ -79,23 +79,49 @@ for (let i = word.length - 1; i >= 0; i--) {
 }
 
 //Functions
-function grumpus(){
+function grumpus() {
     console.log('ugh! this isnt working!');
     console.log('ugh! this isnt going to work!');
     console.log('ugh! this isnt what i want to do right now!');
 }
+
 grumpus();
-for(let i =0; i < 50; i++){
+for (let i = 0; i < 2; i++) {
     grumpus();
 }
 
 //Dice roll function
-function rollDie(){
-    let roll = Math.floor(Math.random()*6) + 1;
+function rollDie() {
+    let roll = Math.floor(Math.random() * 6) + 1;
     console.log('Rolled: ${roll}');
 }
 
-//cards
-function getCard(){
-    2,3,4,5,6,7,8,9,10,J,Q,K,A
+//Playing Cards
+// function getCard() {
+//     const values = [
+//         '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'
+//     ];
+//     const valIdx = Math.floor(Math.random() * values.length);
+//     const value = values[valIdx];
+//     const suits = ['clubs', 'spades', 'hearts', 'diamonds'];
+//     const suitIdx = Math.floor(Math.random() * suits.length);
+//     const suit = suits[suitIdx];
+//     console.log(value, suit)
+// return{value: value, suit: suit};
+// }
+//
+function pick(arr){
+    const idx = Math.floor(Math.random() * arr.length);
+    return arr[idx];
+}
+//Shortcut for Playing Cards
+function getCard() {
+    const values =
+        ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+
+    // const value = pick(values);
+    const suits = ['clubs', 'spades', 'hearts', 'diamonds'];
+    // const suitIdx = Math.floor(Math.random() * suits.length);
+    // const suit = pick(suits);
+    return {value: pick(values), suit: pick(suits)};
 }
