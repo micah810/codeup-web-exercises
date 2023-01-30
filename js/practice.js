@@ -121,7 +121,11 @@ function getCard() {
 
     // const value = pick(values);
     const suits = ['clubs', 'spades', 'hearts', 'diamonds'];
+    // const suit = pick(suits);
     // const suitIdx = Math.floor(Math.random() * suits.length);
     // const suit = pick(suits);
     return {value: pick(values), suit: pick(suits)};
 }
+
+
+
