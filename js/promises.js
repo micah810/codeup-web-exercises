@@ -2,6 +2,17 @@
 
 (async function () {
 
+//     // //function lastCommitDate(username, apiKey){
+//     // const url = 'https://blah/blah${username}/blah/blah';
+//     // return fetch(url,
+//     //     {
+//     //         headers:{'Authorization': 'token${apiKey}' }
+//     //     }).then(function(response){
+//     return response.json();
+// }).then(function(data){
+//     //*dig through the events and find the most recent PushEvent*//
+//
+// })
 
     function lastCommit(userName) {
 
