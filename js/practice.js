@@ -127,5 +127,47 @@ function getCard() {
     return {value: pick(values), suit: pick(suits)};
 }
 
+//REVIEW!!!!
+(function (){
+    //1. write a function called commasToHyphens that replaces commas in a given string parameter
+    // with hyphens. The function should return the new string
+    function commasToHyphens(str){
+        const newString = str.replaceAll(",", "-");
+        //return str.split(",").join("-");
+        return newString
+    }
+    console.log(commasToHyphens("hello,world"));
+    //outputs "hello-world"
 
+    //2. Write a function called sumOfAges that returns a sum of a given array of peoples objects ages
+    const people = [
+        {
+            name: "bob",
+            age: 10
+        },
+        {
+            name: "sue",
+            age: 22
+        },
+        {
+            name: "Lou",
+            age: 41
+        }
+    ];
+    function sumOfAges(people){
+        let sum = 0;
+        for (let i = 0; i < people.length; i++) {
+            sum += people[i].age;
+        }
+    }
+    // for (let i = 0; i < people.length; i++) {
+    //     let humans = people[i];
+    //     console.log(`${humans.name} is ${humans.age} years old`);
+        // const sum = [10, 22, 41].reduce((partialSum, a) => partialSum + people, 0);
+        // console.log(sum);
+})();
 
+// TEST REVIEW!!!!!
+// javascript I & II
+// loop objects and arrays
+// dom stuff buttons to turn background green or whatever
