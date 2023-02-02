@@ -110,10 +110,11 @@ function rollDie() {
 // return{value: value, suit: suit};
 // }
 //
-function pick(arr){
+function pick(arr) {
     const idx = Math.floor(Math.random() * arr.length);
     return arr[idx];
 }
+
 //Shortcut for Playing Cards
 function getCard() {
     const values =
@@ -128,14 +129,15 @@ function getCard() {
 }
 
 //REVIEW!!!!
-(function (){
+(function () {
     //1. write a function called commasToHyphens that replaces commas in a given string parameter
     // with hyphens. The function should return the new string
-    function commasToHyphens(str){
+    function commasToHyphens(str) {
         const newString = str.replaceAll(",", "-");
         //return str.split(",").join("-");
         return newString
     }
+
     console.log(commasToHyphens("hello,world"));
     //outputs "hello-world"
 
@@ -154,20 +156,190 @@ function getCard() {
             age: 41
         }
     ];
-    function sumOfAges(people){
+
+    function sumOfAges(people) {
         let sum = 0;
         for (let i = 0; i < people.length; i++) {
             sum += people[i].age;
         }
     }
+
     // for (let i = 0; i < people.length; i++) {
     //     let humans = people[i];
     //     console.log(`${humans.name} is ${humans.age} years old`);
-        // const sum = [10, 22, 41].reduce((partialSum, a) => partialSum + people, 0);
-        // console.log(sum);
+    // const sum = [10, 22, 41].reduce((partialSum, a) => partialSum + people, 0);
+    // console.log(sum);
 })();
 
 // TEST REVIEW!!!!!
 // javascript I & II
 // loop objects and arrays
 // dom stuff buttons to turn background green or whatever
+
+// *NUMBER ONE*
+// Write a function called isBoolean that returns true if the parameter has a data type of boolean.
+function isBoolean(i) {
+    if (typeof i !== "boolean") {
+        return false;
+    }
+    return true;
+}
+
+//OR this both work
+function boolean(x) {
+    if (x === true || x === false) {
+        return true;
+    }
+    return false;
+}
+
+// Otherwise, it returns false. Examples: console.log(isBoolean(42));
+// outputs false console.log(isBoolean("true"));
+// outputs false console.log(isBoolean(false));
+// outputs true
+
+//*NUMBER TWO*
+// Write a function called hasBoolean that returns true if
+// the array parameter contains at least one element that is a boolean.
+// Otherwise, it returns false. Examples:
+function hasBoolean(arr) {
+    //look thru all elements in input. if a boolean is found return true
+    //if NO boolean elements are found, return false
+    for (i = 0; i < arr.length; i++) {
+        if (isBoolean(arr[i])) {
+            return true;
+        }
+    }
+    return false;
+}
+
+console.log(hasBoolean([1, 2, 3, 4])); // outputs false
+console.log(hasBoolean([1, "false", 3, 4])); // outputs false
+console.log(hasBoolean([1, 2, true, 4])); // outputs true
+
+const people = [{
+    name: "Bob",
+    age: 42
+}, {
+    name: "Sue",
+    age: 27
+}, {
+    name: "Lou",
+    age: 33
+}, {
+    name: "Zanzibar",
+    age: 18
+}, {
+    name: "Gladys",
+    age: 39
+}
+];
+
+function minAge(arr) {
+    let min = Number.POSITIVE_INFINITY;
+    for (let i = 0; i < arr.length; i++) {
+        const person = arr[i];
+        //comparison
+        if (person.age < min) {
+            min = person.age;
+        }
+    }
+    return min;
+}
+
+console.log(minAge(people)); //should output 18
+
+function longestName(arr) {
+    let longestNameForNow = "";
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].name.length > longestNameForNow.length) {
+            longestNameForNow = arr[i].name;
+        }
+    }
+    return longestNameForNow;
+}
+
+console.log(longestName(people)); //should output zanzibar
+
+function createPerson(name, age) {
+    const newPerson = {
+        name: name,
+        age: age
+    }
+    return newPerson;
+}
+
+const kat = createPerson("kat", 2);
+console.log(kat);
+//finished
+
+
+// //DOM stuff
+// // When the button with an id of bold-btn is clicked, that button's font weight should change to bold.
+// $("bold-btn").click(function(){
+//     $(this).css("font-weight", "bolder");
+// });
+//
+//
+// // // When the button with an id of reload-btn is clicked, the page should reload (i.e., refresh).
+// $("#reload-btn".click(function () {
+//     window.location.reload();
+// }));
+// //
+// // // Whenever a list item with a class of loud-item is clicked, display that list item's text in an alert().
+// $(".loud-item".click(function (){
+//     alert($(this).text());
+// }));
+// //
+// // // Whenever a list item with a class of data-item is hovered over, display that list item's data-id value in the span with an id of data-display.
+// $(".data-item").hover(function (){
+//     const dataId = $(this).data("id");
+//     // const dataId = $(this).attr("data-id");
+//     $("#data-display").text(dataId);
+// });
+// //
+// // // Whenever the button with an id of change-text-btn is clicked, change that button's text to whatever has been typed in the input with an id of change-text-input.
+// $("#change-text-btn").click(function(){
+//     const newButtonName = $("#change-text-input").val();
+//     $(this).text(newButtonName);
+// });
+
+let js = "fun";
+console.log(40 + 8 + 23 - 10);
+
+console.log("micah");
+console.log(23);
+
+let firstName = "micah"
+console.log(firstName);
+
+let $varable = "dolla dolla billz";
+console.log($varable);
+
+let country = "USA";
+let continent = "North America";
+let population = "at least 100";
+console.log(country);
+console.log(continent);
+console.log(population);
+
+let javascriptIsFun = true;
+console.log(javascriptIsFun);
+
+console.log(typeof true);
+console.log(typeof javascriptIsFun);
+console.log(23);
+console.log(typeof "Jonas");
+
+const ageMicah = 2023 - 1999;
+const ageCoco = 2016 - 2006;
+console.log(ageMicah, ageCoco);
+
+const age = 16;
+const isOldEnough = age >= 18;
+if (isOldEnough) {
+    console.log('Coco can start drinking🥰')
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`Coco is too young! Gonna have to wait another ${yearsLeft} years!`);
+}
