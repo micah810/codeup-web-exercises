@@ -216,7 +216,7 @@ function hasBoolean(arr) {
 console.log(hasBoolean([1, 2, 3, 4])); // outputs false
 console.log(hasBoolean([1, "false", 3, 4])); // outputs false
 console.log(hasBoolean([1, 2, true, 4])); // outputs true
-
+//3
 const people = [{
     name: "Bob",
     age: 42
@@ -343,3 +343,83 @@ if (isOldEnough) {
     const yearsLeft = 18 - age;
     console.log(`Coco is too young! Gonna have to wait another ${yearsLeft} years!`);
 }
+
+// for loops
+const names = ['Micah', 'coco', 'yev', 'Dezz'];
+
+for (name of names) {
+    console.log(name);
+    //Maria isnt showing on my list and idk why => its cause my dumbass didnt even put
+    //Maria into the list which made this false and not run .~.)
+    if (name === 'Maria') {
+        console.log('Maria is in the list');
+        break;
+    }
+}
+
+// another for loops but this one fcked with my computer soo...
+// let loading = 0;
+//
+// while(loading < 100){
+//     console.log('Website is still loading');
+//     //add a statement that would turn this false by adding plus one
+//     loading++;
+// }
+
+var i = 0;
+while (i < 10) {
+    console.log('while loops iteration #' + i);
+    i++
+}
+//this loop below is never true because i cannot = 10 and also be lower than 10 so it wont run
+var i = 10;
+while (i < 10) {
+    console.log('while loops iteration #' + i);
+    i++
+}
+
+var numberToStopAt = 23;
+
+for (var i = 1; i < 100; i++) {
+    console.log('This loop will break at set var:' + i);
+    if (i === numberToStopAt) {
+        console.log('We have reached the stopping point: BREAK!');
+        //using the keyword "break" to exit for the while loop
+        break;
+        //nothing after 'break' will get processed
+        console.log('This line will never be seen');
+    }
+}
+
+//wtf why isnt it showing => because you are an idiot and didnt enter it in the console
+function showMultiplicationTable(num) {
+    for (let i = 1; i <= 10; i++) {
+        console.log(num + " x " + i + " = " + (num * i));
+    }
+}
+
+for (let i = 0; i < 10; i++) {
+    let randomNum = Math.floor(Math.random() * 181) + 20;
+    console.log(`${randomNum} is ${randomNum % 2 === 0 ? "even" : "odd"}`);
+}
+// Here's a breakdown of the code above:
+// randomNum is a variable that holds a random number.
+// randomNum % 2 === 0 calculates the remainder of randomNum divided by 2 and checks if
+// it's equal to 0. If the result is true, it means the number is even. If the result is false, it means the number is odd.
+// ? "even" : "odd" is a shorthand if-else statement. If randomNum % 2 === 0 is true,
+// then the string "even" will be returned.
+// If it's false, then the string "odd" will be returned.
+// The template literal (`) is used to interpolate the values of randomNum and
+// the result of the shorthand if-else statement into a single string,
+// which is then passed as an argument to console.log.
+// The template literal syntax allows for embedding expressions,
+// such as ${randomNum % 2 === 0 ? "even" : "odd"}, within a string.
+// The final output to the console will be a string in the format {randomNum} is {even/odd}.
+
+
+
+
+
+
+
+
