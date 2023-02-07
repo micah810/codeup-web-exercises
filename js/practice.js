@@ -279,18 +279,18 @@ console.log(kat);
 // $("bold-btn").click(function(){
 //     $(this).css("font-weight", "bolder");
 // });
-//
-//
-// // // When the button with an id of reload-btn is clicked, the page should reload (i.e., refresh).
+// //
+// //
+// // // // When the button with an id of reload-btn is clicked, the page should reload (i.e., refresh).
 // $("#reload-btn".click(function () {
 //     window.location.reload();
 // }));
-// //
-// // // Whenever a list item with a class of loud-item is clicked, display that list item's text in an alert().
+// // //
+// // // // Whenever a list item with a class of loud-item is clicked, display that list item's text in an alert().
 // $(".loud-item".click(function (){
 //     alert($(this).text());
 // }));
-// //
+// // //
 // // // Whenever a list item with a class of data-item is hovered over, display that list item's data-id value in the span with an id of data-display.
 // $(".data-item").hover(function (){
 //     const dataId = $(this).data("id");
@@ -378,6 +378,9 @@ while (i < 10) {
     i++
 }
 
+
+
+//FOR LOOPS PRACTICE!!!
 var numberToStopAt = 23;
 
 for (var i = 1; i < 100; i++) {
@@ -405,20 +408,72 @@ for (let i = 0; i < 10; i++) {
 // Here's a breakdown of the code above:
 // randomNum is a variable that holds a random number.
 // randomNum % 2 === 0 calculates the remainder of randomNum divided by 2 and checks if
+
 // it's equal to 0. If the result is true, it means the number is even. If the result is false, it means the number is odd.
 // ? "even" : "odd" is a shorthand if-else statement. If randomNum % 2 === 0 is true,
 // then the string "even" will be returned.
+
 // If it's false, then the string "odd" will be returned.
 // The template literal (`) is used to interpolate the values of randomNum and
 // the result of the shorthand if-else statement into a single string,
 // which is then passed as an argument to console.log.
+
 // The template literal syntax allows for embedding expressions,
 // such as ${randomNum % 2 === 0 ? "even" : "odd"}, within a string.
 // The final output to the console will be a string in the format {randomNum} is {even/odd}.
 
 
+for (let i = 1; i <= 9; i++) {
+    console.log(String(i).repeat(i));
+}
+// The String(i) constructor converts the loop variable i to a string.
+// The repeat(i) method returns a new string consisting of the original string repeated i times.
+// The loop continues to run until i is greater than 9,
+// and the code inside the loop is executed 9 times, generating the following pattern
 
 
+for (let j = 100; j >=5 ; j -= 5) {
+    console.log(j)
+}
+// A for loop is used to repeat a block of code until i is less than or equal to 5.
+// The loop variable i is initialized to 100 and decreased by 5 after each iteration.
+// After each iteration of the loop, i is decremented by 5 using i -= 5.
+// The loop continues to run until i is less than or equal to 5,
+// and the code inside the loop is executed 20 times, generating the pattern
+
+
+const userNum = Number(prompt("enter number between 1 and 50:"));
+for (let j = 1; j <= 50; j++) {
+    if(i % 2 === 0){
+        break;
+    }
+    if (i === userNum){
+        continue;
+    }
+    console.log(j)
+}
+
+//TEST DATA: 22,295,176,440,37,105,10,1100,86,52
+const calcTip = function(bill){
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+//1. Create an array 'bills' containing all 10 test bill values
+const bills = [22,295,176,440,37,105,10,110,86,52]
+//make it a const
+
+//2. Create empty arrays for the tips and the totals ('tips' 'totals')
+const tips = [];
+const totals = [];
+
+//3. Use the 'calcTip' function we wrote before (no need to repeat) to calculate tips
+//and total values ( bill + tip ) for every bill value in the bills array. Use a loop
+//to perform the 10 calculations
+for (let i = 0; i < bills.length; i++){
+    const tip = calcTip(bills[i]);
+    tips.push(tips);
+    totals.push(tips + bills[i]);
+}
+console.log(bills, tips, totals);
 
 
 
