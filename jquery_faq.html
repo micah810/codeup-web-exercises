@@ -3,87 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script>
-        $(document).ready(function () {
-            $("#button").css("background-color", "red");
-        });
-    </script>
 </head>
 <body>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-        crossorigin="anonymous">
+
+<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js"-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    integrity = "sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin = "anonymous" >
 </script>
+
+<p>National Parks & Facts</p>
+<dl>
+        <dt class ="highlighted"><span class="important>">Redwood Forest National Park</span></dt>
+    <dd class="invisible">Redwoods are the tallest trees on earth reaching more than 350 feet high</dd>
+    <dd class="invisible">you can't see the top, even on a clear day</dd>
+    <dd class="invisible">the wood is in fact not very red</dd>
+
+    <dt class ="highlighted"><span class="important>">Yellowstone National Park</span></dt>
+    <dd class="invisible">Most active volcanoes and hot springs in the world</dd>
+    <dd class="invisible">Hunting wolves is illegal</dd>
+    <dd class="invisible">Old faithful is not very faithful</dd>
+
+    <dt class ="highlighted"><span class="important>">Grand Canyon National Park</span></dt>
+    <dd class="invisible">The Canyon Creates Its Own Weather</dd>
+    <dd class="invisible">There are Over 1000 Caves</dd>
+    <dd class="invisible">The Grand Canyon is located in the US state of Arizona and stretches to Colorado</dd>
+    <dd class="invisible">It is in fact quite grand</dd>
+</dl>
+
+<a href="#" id="make-hidden">Click to hide text.</a>
+
+
 <script src="/js/jquery.js"></script>
-<div class="btn">
-    <h3 id="national-parks-heading">YellowStone National Park</h3>
-    <ul id="yellowstone-park">
-        <li>Most active volcanoes and hot springs in the world</li>
-        <li>Badlands</li>
-        <li>Carlsbad Caverns</li>
-        <li>Denali</li>
-    </ul>
-    <h3>Redwood Forest National Park</h3>
-    <ul id="redwood-forest">
-        <li>Redwoods are the tallest trees on earth reaching more than 350 feet high</li>
-        <li>you can't see the top, even on a clear day</li>
-        <li>the wood is in fact not very red</li>
-        <li>Davis Mountains</li>
-    </ul>
-    <h3>Grand Canyon National Park</h3>
-    <ul id="grand-canyon">
-        <li>The Canyon Creates Its Own Weather</li>
-        <li>There are Over 1000 Caves</li>
-        <li>The Grand Canyon is located in the US state of Arizona and stretches to Colorado</li>
-        <li>its pretty cool</li>
-    </ul>
-</div>
+
+<!--Create some CSS rules that sets elements with the invisible class to visibility: hidden;.-->
 <script>
-    const nationalParks = {
-        'color': 'red',
-        'background-color': 'yellow',
-        'font-size': '28px'
-    };
-    $('#grand-canyon').css(highlightedStyles);
+    "use strict"
+
+    $(document).ready(function() {
+        $('#make-hidden').click(function (event) {
+            event.preventDefault();
+            $('.invisible').css('visibility', 'hidden');
+            $('#highlight-important').click(function(event) {
+                event.preventDefault();
+                $('.important').addClass('highlighted');
+            });
+        });
+
+    });
 </script>
-<form id="button">
-    <button type="button">YellowStone</button>
-    <input type="button" value="YS Facts"><br>
-    <button type="button">Grand Canyon</button>
-    <input type="button" value="GC Facts"><br>
-    <button type="button">Redwood Forest</button>
-    <input type="button" value="RW Facts"><br>
-</form>
+<!--Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.-->
+
 </body>
 </html>
-<!--Let toggleState= 0;-->
-<!--$(“#toggle-class-btn”).click(function(){-->
-<!--if(toggleState % 2 === 0){-->
-<!--$(“li”).toggleClass(“cool-border”);-->
-<!--} else {-->
-<!--$(“li”.toggleClass(“cool-bg”);-->
-<!--toggleState++;-->
-<!--}-->
-<!--});-->
-
-
-<!--    //target button one-->
-<!--    <button id="button-1">first swap</button>-->
-$("#button-1").click(function)(){
-let img1 = $(this).prev().css("bg img");
-});
-
-go up to the parent from the button you can get to the last parent then with .next
-then go to its children and then with its first child
-
-let img2 =$(this).parent().next().children().first().css("background-img");
-console.log(img2);
-});
-
-to make the middle picture go 50/50 switch. Add this to button 2
-
-if(Math.random() < 0.5)
-
-
-
-
