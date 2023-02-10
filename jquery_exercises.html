@@ -4,13 +4,21 @@
     <title>Curriculum Code Sample</title>
 </head>
 <body>
+<!--id = #mainHeader-->
+<h1 id="mainHeader">Jquery Exercise</h1>
+<!--id = #summary-->
+<h3 id="codeup">Below is Latin and some Dr. Seuss</h3>
+<!--id = #paragraph-->
 
-<h1 id="main-header">Jquery Exercise</h1>
-<div id>
-    <p id="paragraph-text"> words words words words words words words words
-        words words words words words words words words words words words words words</p>
+<div id="paragraph">
+    <!--   1 class = .text-->
+    <p class="codeup">Lorem ipsum</p>
 </div>
-<ul class="dr-suess">
+
+<!--2 class = .codeup-->
+<h4 class="codeup">Dr. Seuss Portion</h4>
+<!-- 3 class = .codeup-->
+<ul class="notCodeup">
     <li>one fish</li>
     <li>two fish</li>
     <li>red fish</li>
@@ -27,10 +35,30 @@
     });
 </script>
 <script>
-    var contents = $('#main-header').html();
+    // Use jQuery to select an element by the id. Alert the contents of the element.
+    const contents = $('#mainHeader').html();
     alert(contents);
-    // var contents = $('#paragraph-text').html();
-    // alert(contents);
-    $('.dr-suess').css('background-color', 'purple');
+
+    // Update the jQuery code to select and alert a different id.
+    const content = $('#text').html();
+    alert(content);
+
+    // Use the same id on 2 elements. How does this change the jQuery selection?
+    // it doesn't work
+
+    // Using jQuery, create a border around all elements with the class codeup
+    // that is 1 pixel wide and red.
+    $(document).ready(function () {
+        $('.codeup').css('border', '1px solid red');
+    });
+//changing font size
+    $(document).ready(function () {
+        $('li').css('font-size', '20px');
+    });
+//highlighting h1,p,li
+    $(document).ready(function(){
+        $('h1,p,li').css('bakcground-color','pink');
+    });
+
 </script>
 </body>
