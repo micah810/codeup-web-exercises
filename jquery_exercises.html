@@ -3,9 +3,12 @@
 <head>
     <title>Curriculum Code Sample</title>
 </head>
+<script>
+
+</script>
 <body>
 <!--id = #mainHeader-->
-<h1 id="mainHeader">Jquery Exercise</h1>
+<h1>Jquery Exercise</h1>
 <!--id = #summary-->
 <h3 id="codeup">Below is Latin and some Dr. Seuss</h3>
 <!--id = #paragraph-->
@@ -30,34 +33,47 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/my-custom-javascript.js"></script>
 <script>
-    $(document).ready(function () {
-        alert("DOM has finished loading");
-    });
-</script>
-<script>
-    // Use jQuery to select an element by the id. Alert the contents of the element.
-    const contents = $('#mainHeader').html();
-    alert(contents);
-
-    // Update the jQuery code to select and alert a different id.
-    const content = $('#text').html();
-    alert(content);
-
-    // Use the same id on 2 elements. How does this change the jQuery selection?
-    // it doesn't work
-
-    // Using jQuery, create a border around all elements with the class codeup
-    // that is 1 pixel wide and red.
-    $(document).ready(function () {
-        $('.codeup').css('border', '1px solid red');
-    });
-//changing font size
-    $(document).ready(function () {
-        $('li').css('font-size', '20px');
-    });
-//highlighting h1,p,li
-    $(document).ready(function(){
-        $('h1,p,li').css('background-color','pink');
-    });
+    // Add jQuery code that will change the background color of
+    // a h1 element when clicked.
+    $(document).ready(fucntion(){
+        $("h1").click(function(){
+            $(this).css("background-color", "pink");
+        });
+    };
 </script>
 </body>
+</html>
+<!--<script>-->
+<!--    $(document).ready(function () {-->
+<!--        alert("DOM has finished loading");-->
+<!--    });-->
+<!--</script>-->
+<!--<script>-->
+<!--    // Use jQuery to select an element by the id. Alert the contents of the element.-->
+<!--    const contents = $('#mainHeader').html();-->
+<!--    alert(contents);-->
+
+<!--    // Update the jQuery code to select and alert a different id.-->
+<!--    const content = $('#text').html();-->
+<!--    alert(content);-->
+
+<!--    // Use the same id on 2 elements. How does this change the jQuery selection?-->
+<!--    // it doesn't work-->
+
+<!--    // Using jQuery, create a border around all elements with the class codeup-->
+<!--    // that is 1 pixel wide and red.-->
+<!--    $(document).ready(function () {-->
+<!--        $('.codeup').css('border', '1px solid red');-->
+<!--    });-->
+<!--//changing font size-->
+<!--    $(document).ready(function () {-->
+<!--        $('li').css('font-size', '20px');-->
+<!--    });-->
+<!--//highlighting h1,p,li-->
+<!--    $(document).ready(function(){-->
+<!--        $('h1,p,li').css('background-color','pink');-->
+<!--    });-->
+<!--    $('#mainHeader').click(function(){-->
+<!--        -->
+<!--    });-->
+<!--</script>-->

@@ -1,5 +1,18 @@
 /*NAVBAR DESIGN*/
-#navbar{
+#navbar {
     overflow: hidden;
-    background-color: #07b39b;
+    background-color: gray;
+}
+
+#navbar {
+    float: left;
+    display: block;
+    color: #5073b8;
+    text-align: center;
+    padding: 14px;
+    text-decoration: black;
+}
+
+#container{
+    background-color:slategray;
 }
