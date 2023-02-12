@@ -1,7 +1,15 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Curriculum Code Sample</title>
+<script>
+    $(document).ready(function(){
+        $("h1").click(function(){
+            $(this).css("background-color", "yellow");
+        });
+    });
+</script>
 </head>
 <script>
 
@@ -33,13 +41,8 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/my-custom-javascript.js"></script>
 <script>
-    // Add jQuery code that will change the background color of
-    // a h1 element when clicked.
-    $(document).ready(fucntion(){
-        $("h1").click(function(){
-            $(this).css("background-color", "pink");
-        });
-    };
+
+
 </script>
 </body>
 </html>
@@ -77,3 +80,15 @@
 <!--        -->
 <!--    });-->
 <!--</script>-->
+
+// Add jQuery code that will change the background color of
+// a h1 element when clicked.
+$(document).ready(fucntion(){
+$("h1").click(function(){
+$(this).css("background-color", "pink");
+});
+} $(document).ready(function(){
+$("p").dblclick(function(){
+$(this).css("font-size", "18px");
+});
+});
