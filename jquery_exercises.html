@@ -1,35 +1,22 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Curriculum Code Sample</title>
-<script>
-    $(document).ready(function(){
-        $("h1").click(function(){
-            $(this).css("background-color", "yellow");
-        });
-    });
-</script>
+    <!--ask about $(this)-->
 </head>
 <script>
 
 </script>
 <body>
-<!--id = #mainHeader-->
-<h1>Jquery Exercise</h1>
-<!--id = #summary-->
+<h1 id="mainHeader">Jquery Exercise</h1>
 <h3 id="codeup">Below is Latin and some Dr. Seuss</h3>
-<!--id = #paragraph-->
-
-<div id="paragraph">
-    <!--   1 class = .text-->
-    <p class="codeup">Lorem ipsum</p>
-</div>
-
-<!--2 class = .codeup-->
+<p id="paragraph">This paragraph challenge with the .dblclick
+    method is driving me insane because I can't get it to go away.
+    I'm so tired of this not becoming larger. I won't change the functions or elements
+but i'll change what its supposed to do like highlight red and that works fine... rip.</p>
 <h4 class="codeup">Dr. Seuss Portion</h4>
 <!-- 3 class = .codeup-->
-<ul class="notCodeup">
+<ul id="notCodeup">
     <li>one fish</li>
     <li>two fish</li>
     <li>red fish</li>
@@ -41,8 +28,23 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/my-custom-javascript.js"></script>
 <script>
+    $("#mainHeader").click(function () {
+        $(this).css("background-color", "pink");
+    });
+</script>
+<script>
 
+    $(document).ready(function () {
+        $('#paragraph').dblclick(function () {
+            $(this).css('font-size', '18px')
+        });
+    });
 
+    $(document).ready(function(){
+        $('#notCodeup').hover(function (){
+            $(this).css('background-color', 'red')
+        });
+    });
 </script>
 </body>
 </html>
