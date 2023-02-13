@@ -9,50 +9,62 @@
 <!--<script src="https://code.jquery.com/jquery-2.2.4.min.js"-->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js">
     integrity = "sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-    crossorigin = "anonymous" >
+    crossorigin = "anonymous"
 </script>
 
-<p>National Parks & Facts</p>
-<dl>
-        <dt class ="highlighted"><span class="important>">Redwood Forest National Park</span></dt>
-    <dd class="invisible">Redwoods are the tallest trees on earth reaching more than 350 feet high</dd>
-    <dd class="invisible">you can't see the top, even on a clear day</dd>
-    <dd class="invisible">the wood is in fact not very red</dd>
 
-    <dt class ="highlighted"><span class="important>">Yellowstone National Park</span></dt>
-    <dd class="invisible">Most active volcanoes and hot springs in the world</dd>
-    <dd class="invisible">Hunting wolves is illegal</dd>
-    <dd class="invisible">Old faithful is not very faithful</dd>
+<h1 id="headers">Redwood Forest National Park</h1>
+<ul id="lists">
+    <li class="invisible">Redwoods are the tallest trees on earth reaching more than 350 feet high</li>
+    <li class="invisible">you can't see the top, even on a clear day</li>
+    <li class="invisible">the wood is in fact not very red</li>
+</ul>
+<h1>Yellowstone National Park</h1>
+<ul>
+    <li class="invisible">Most active volcanoes and hot springs in the world</li>
+    <li class="invisible">Hunting wolves is illegal</li>
+    <li class="invisible">Old faithful is not very faithful</li>
+</ul>
+<h1>National Park HeaderGrand Canyon National Park</h1>
+<ul>
+    <li class="invisible">The Canyon Creates Its Own Weather</li>
+    <li class="invisible">There are Over 1000 Caves</li>
+    <li class="invisible">The Grand Canyon is located in the US state of Arizona and stretches to Colorado</li>
+    <li class="invisible">It is in fact quite grand</li>
+</ul>
 
-    <dt class ="highlighted"><span class="important>">Grand Canyon National Park</span></dt>
-    <dd class="invisible">The Canyon Creates Its Own Weather</dd>
-    <dd class="invisible">There are Over 1000 Caves</dd>
-    <dd class="invisible">The Grand Canyon is located in the US state of Arizona and stretches to Colorado</dd>
-    <dd class="invisible">It is in fact quite grand</dd>
-</dl>
-
-<a href="#" id="make-hidden">Click to hide text.</a>
+<!--<script src="/js/jquery.js"></script>-->
 
 
-<script src="/js/jquery.js"></script>
-
-<!--Create some CSS rules that sets elements with the invisible class to visibility: hidden;.-->
+<button id="clickButton">Highlight The Last Facts</button>
+<!--Create a button that, when clicked, makes the last li in each ul have a yellow background-->
 <script>
-    "use strict"
+    document.getElementById("clickButton").addEventListener("click", function() {
+        $('.invisible').last().css('background-color', 'yellow');
+    });
 
-    $(document).ready(function() {
-        $('#make-hidden').click(function (event) {
-            event.preventDefault();
-            $('.invisible').css('visibility', 'hidden');
-            $('#highlight-important').click(function(event) {
-                event.preventDefault();
-                $('.important').addClass('highlighted');
-            });
-        });
+    $("h1").click(function () {
+        $('li').last().css("font-weight", "bold");
+    });
 
+    $("h1").click(function () {
+        $('li').first().css("background", "blue");
     });
 </script>
-<!--Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.-->
+
+
+
+
+
+
+<!--&lt;!&ndash;practice run below&ndash;&gt;-->
+<!--<script>-->
+<!--$('dd').first().css('background-color', 'pink');-->
+<!--$('dd').last().css('background-color', 'blue');-->
+<!--$('.highlighted').children().css('font-weight', 'bold');-->
+<!--$('.highlighted').parent().css('font-size', '20px');-->
+<!--$('h1').next().css('background-color', 'salmon');-->
+<!--</script>-->
 
 </body>
 </html>
